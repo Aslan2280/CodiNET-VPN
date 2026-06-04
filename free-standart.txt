@@ -19,9 +19,9 @@ vless://266c0d10-d0f4-41f2-9d82-37cedf863fe7@216.24.57.1:443?path=/in-pdr&securi
 
 ========== 🇫🇷 Франция ==========
 vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@149.202.58.99:443?encryption=none&fp=chrome&host=bab-6.site&path=%2Fvws%2F&security=tls&sni=bab-6.site&type=ws#🇫🇷 ФРАНЦИЯ — хороший пинг
-vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@149.202.58.99:443?encryption=none&fp=chrome&host=bab-6.site&path=%2Fvws%2F&security=tls&sni=bab-6.site&type=ws#🇫🇷 Франция #1 | Рабочий 100%
-vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@149.202.58.99:443?encryption=none&fp=chrome&host=bab-6.site&path=/vws/&security=tls&sni=bab-6.site&type=ws#🇫🇷 Франция #2 | Рабочий 100%
-vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@149.202.58.99:443?encryption=none&fp=chrome&host=bab-6.site&path=/vws/&security=tls&sni=bab-6.site&type=ws#🇫🇷 Франция #3 | Рабочий 100%
+vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@149.202.58.99:443?encryption=none&fp=chrome&host=bab-6.site&path=%2Fvws%2F&security=tls&sni=bab-6.site&type=ws#🇫🇷 Франция #1
+vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@149.202.58.99:443?encryption=none&fp=chrome&host=bab-6.site&path=/vws/&security=tls&sni=bab-6.site&type=ws#🇫🇷 Франция #2
+vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@149.202.58.99:443?encryption=none&fp=chrome&host=bab-6.site&path=/vws/&security=tls&sni=bab-6.site&type=ws#🇫🇷 Франция #3
 
 ========== 🇨🇦 Канада ==========
 vless://fc8a0708-951a-4027-860f-2a154ebc4dd7@172.67.78.254:2083?path=/proxyip=89.208.96.167&security=tls&encryption=none&insecure=0&host=crimson-king-301d.nexoxnet.workers.dev&fp=chrome&type=ws&allowInsecure=0&sni=crimson-king-301d.nexoxnet.workers.dev#🇨🇦 КАНАДА — обход блокировок

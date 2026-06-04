@@ -1,6 +1,6 @@
 #subscription-userinfo: upload=0; download=0; total=9999999999999999; expire=1798761600
 #announce: 🚀 Бесплатная подписка от @CodiNetVPN
-#profile-title: 🌟 CodiNET | Стандарт Тариф
+#profile-title: 🌟 CodiNET | Стандарт
 #profile-update-interval: 12
 #profile-web-page-url: https://t.me/CodiNetVPN
 #support-url: https://t.me/CodiNetVPNbot

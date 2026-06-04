@@ -1,6 +1,9 @@
 #subscription-userinfo: upload=0; download=0; total=9999999999999999; expire=1798761600
-#announce: Бесплатная подписка от @CodiNetVPN
-#profile-title: 🌟CodiNET | Free Standart
+#announce: 🚀 Бесплатная подписка от @CodiNETVPN
+#profile-title: 🌟 CodiNET | Стандарт
+#profile-update-interval: 3
+#profile-web-page-url: https://t.me/CodiNetVPN
+#support-url: https://boosty.to/codinet
 vless://266c0d10-d0f4-41f2-9d82-37cedf863fe7@216.24.57.1:443?path=/in-pdr&security=tls&alpn=http/1.1&encryption=none&insecure=0&host=cyylr.eu.cc&fp=chrome&ech=ip.gs+udp://8.8.8.8&type=ws&allowInsecure=0&sni=cyylr.eu.cc#🇺🇸 Америка #1
 vless://03bc875d-0d8e-49b6-9094-89a8159e65ee@91.107.191.12:29376?security=none&encryption=none&headerType=none&type=tcp#🇩🇪 Германия #1
 vless://fc8a0708-951a-4027-860f-2a154ebc4dd7@172.67.78.254:2083?path=/proxyip=89.208.96.167&security=tls&encryption=none&insecure=0&host=crimson-king-301d.nexoxnet.workers.dev&fp=chrome&type=ws&allowInsecure=0&sni=crimson-king-301d.nexoxnet.workers.dev#🇨🇦 Канада #1

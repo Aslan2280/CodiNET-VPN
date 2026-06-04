@@ -5,6 +5,8 @@
 #profile-web-page-url: https://t.me/CodiNetVPN
 #support-url: https://t.me/CodiNetVPNbot
 
+vless://31fb98b7-e7a1-4b56-8c6a-3f060f06393c@freetg.strettenvpn.com:443?encryption=none&security=reality&type=tcp&fp=chrome&pbk=yhUfTGgu5PYRlFqMnRZkxffH_aU05AFUToGI8_EKF28&sid=8248954896&spx=%2Fo7Aaf6fjwgbitolAe&sni=ads.x5.ru&flow=xtls-rprx-vision#🇩🇪%20Telegram%20Reality
+
 ========== 🇺🇸 США ==========
 vless://266c0d10-d0f4-41f2-9d82-37cedf863fe7@216.24.57.1:443?path=/in-pdr&security=tls&alpn=http/1.1&encryption=none&insecure=0&host=cyylr.eu.cc&fp=chrome&ech=ip.gs+udp://8.8.8.8&type=ws&allowInsecure=0&sni=cyylr.eu.cc#🇺🇸 США #1
 

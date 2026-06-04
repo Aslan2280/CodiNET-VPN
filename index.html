@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodiNET VPN — Стандартный тариф</title>
+    <title>CodiNET VPN — Тарифы</title>
     <style>
         * {
             margin: 0;
@@ -50,6 +50,52 @@
             font-size: 14px;
             color: #666;
             margin-top: 8px;
+        }
+
+        /* Переключатель тарифов */
+        .tabs {
+            display: flex;
+            gap: 12px;
+            max-width: 500px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            flex: 1;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 16px;
+            padding: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .tab.active {
+            background: #1a1a1a;
+            border-color: #1a1a1a;
+        }
+
+        .tab.active .tab-title {
+            color: white;
+        }
+
+        .tab.active .tab-price {
+            color: #00c6fb;
+        }
+
+        .tab-title {
+            font-weight: 600;
+            font-size: 16px;
+            color: #1a1a1a;
+        }
+
+        .tab-price {
+            font-size: 12px;
+            color: #888;
+            margin-top: 4px;
         }
 
         /* Основная карточка */
@@ -285,9 +331,21 @@
         </div>
     </div>
 
-    <!-- Основная карточка с тарифом -->
-    <div class="card">
-        <div class="badge">🔥 6 868+ подключений</div>
+    <!-- Переключатель тарифов -->
+    <div class="tabs">
+        <div class="tab active" data-tab="standard">
+            <div class="tab-title">🌟 Стандартный</div>
+            <div class="tab-price">Бесплатно / Все устройства</div>
+        </div>
+        <div class="tab" data-tab="lte">
+            <div class="tab-title">📡 LTE / Мобильный</div>
+            <div class="tab-price">Бесплатно / Реальные IP</div>
+        </div>
+    </div>
+
+    <!-- Карточка Стандартного тарифа -->
+    <div class="card" id="standardCard">
+        <div class="badge">🔥 Популярно</div>
         <h1>Стандартный</h1>
         <div class="price">0 ₽ <span>/ месяц</span></div>
         <div class="description">
@@ -302,24 +360,63 @@
             <div class="feature">Действует до 31.12.2026</div>
         </div>
 
-        <!-- Кнопка копирования подписки -->
-        <button class="btn btn-copy" id="copyBtn">
+        <button class="btn btn-copy" id="copyStandardBtn">
             📋 Скопировать подписку
         </button>
 
-        <!-- Кнопка открыть Happ -->
-        <a href="happ://subscribe?url=https://aslan2280.github.io/CodiNET-VPN/free-standart.txt" class="btn btn-happ" id="happBtn">
+        <a href="happ://subscribe?url=https://aslan2280.github.io/CodiNET-VPN/free-standart.txt" class="btn btn-happ" id="happStandardBtn">
             🚀 Открыть Happ
         </a>
 
-        <!-- Кнопка открыть V2RayTUN -->
-        <a href="v2raytun://subscribe?url=https://aslan2280.github.io/CodiNET-VPN/free-standart.txt" class="btn btn-v2ray" id="v2rayBtn">
+        <a href="v2raytun://subscribe?url=https://aslan2280.github.io/CodiNET-VPN/free-standart.txt" class="btn btn-v2ray" id="v2rayStandardBtn">
             🔌 Открыть V2RayTUN
         </a>
 
         <div class="manual-link" style="background: #f9f9f9; padding: 12px; border-radius: 8px; margin-top: 20px; font-size: 12px; text-align: center; word-break: break-all;">
             📌 <strong>Подписка:</strong><br>
             <span>https://aslan2280.github.io/CodiNET-VPN/free-standart.txt</span>
+        </div>
+
+        <div class="info" style="font-size: 12px; color: #888; text-align: center; margin-top: 20px;">
+            🔹 <strong>Инструкция:</strong><br>
+            1. Нажмите «Скопировать подписку»<br>
+            2. Откройте Happ или V2RayTUN → «+» → «Импорт по ссылке»<br>
+            3. Вставьте подписку и нажмите «Добавить»
+        </div>
+    </div>
+
+    <!-- Карточка LTE тарифа -->
+    <div class="card" id="lteCard" style="display: none;">
+        <div class="badge">📡 Нет LTE!</div>
+        <h1>LTE / Мобильный</h1>
+        <div class="price">0 ₽ <span>/ месяц</span></div>
+        <div class="description">
+            Специальный тариф для обхода блокировок в мобильных сетях (LTE, 4G, 5G). Реальные IP-адреса разных стран.
+        </div>
+
+        <div class="features">
+            <div class="feature">Безлимитный трафик</div>
+            <div class="feature">Реальные IP-адреса</div>
+            <div class="feature">15+ серверов в Европе</div>
+            <div class="feature">Поддержка VLESS + gRPC / Reality</div>
+            <div class="feature">Действует до 31.12.2026</div>
+        </div>
+
+        <button class="btn btn-copy" id="copyLteBtn">
+            📋 Скопировать подписку
+        </button>
+
+        <a href="happ://subscribe?url=https://aslan2280.github.io/CodiNET-VPN/FreeWhite-lists.txt" class="btn btn-happ" id="happLteBtn">
+            🚀 Открыть Happ
+        </a>
+
+        <a href="v2raytun://subscribe?url=https://aslan2280.github.io/CodiNET-VPN/FreeWhite-lists.txt" class="btn btn-v2ray" id="v2rayLteBtn">
+            🔌 Открыть V2RayTUN
+        </a>
+
+        <div class="manual-link" style="background: #f9f9f9; padding: 12px; border-radius: 8px; margin-top: 20px; font-size: 12px; text-align: center; word-break: break-all;">
+            📌 <strong>Подписка:</strong><br>
+            <span>https://aslan2280.github.io/CodiNET-VPN/FreeWhite-lists.txt</span>
         </div>
 
         <div class="info" style="font-size: 12px; color: #888; text-align: center; margin-top: 20px;">
@@ -358,9 +455,12 @@
     <div id="toast" class="toast">✅ Подписка скопирована</div>
 
     <script>
-        const subscriptionUrl = "https://aslan2280.github.io/CodiNET-VPN/free-standart.txt";
+        // URL подписок
+        const standardUrl = "https://aslan2280.github.io/CodiNET-VPN/free-standart.txt";
+        const lteUrl = "https://aslan2280.github.io/CodiNET-VPN/FreeWhite-lists.txt";
         
-        const copyBtn = document.getElementById('copyBtn');
+        let currentTab = 'standard';
+        
         const toast = document.getElementById('toast');
 
         function showToast(message) {
@@ -371,14 +471,14 @@
             }, 2500);
         }
 
-        // Копирование подписки
-        copyBtn.addEventListener('click', async () => {
+        // Копирование подписки (Стандартная)
+        document.getElementById('copyStandardBtn')?.addEventListener('click', async () => {
             try {
-                await navigator.clipboard.writeText(subscriptionUrl);
+                await navigator.clipboard.writeText(standardUrl);
                 showToast('✅ Подписка скопирована!');
             } catch (err) {
                 const textarea = document.createElement('textarea');
-                textarea.value = subscriptionUrl;
+                textarea.value = standardUrl;
                 document.body.appendChild(textarea);
                 textarea.select();
                 document.execCommand('copy');
@@ -387,8 +487,24 @@
             }
         });
 
-        // Подсказка если Happ не открылся
-        document.getElementById('happBtn')?.addEventListener('click', function() {
+        // Копирование подписки (LTE)
+        document.getElementById('copyLteBtn')?.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(lteUrl);
+                showToast('✅ Подписка скопирована!');
+            } catch (err) {
+                const textarea = document.createElement('textarea');
+                textarea.value = lteUrl;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showToast('✅ Подписка скопирована!');
+            }
+        });
+
+        // Подсказки для Happ и V2RayTUN (Стандарт)
+        document.getElementById('happStandardBtn')?.addEventListener('click', function() {
             setTimeout(() => {
                 if (!document.hidden) {
                     showToast('⚠️ Если Happ не открылся — скопируйте подписку вручную');
@@ -396,13 +512,53 @@
             }, 2000);
         });
 
-        // Подсказка если V2RayTUN не открылся
-        document.getElementById('v2rayBtn')?.addEventListener('click', function() {
+        document.getElementById('v2rayStandardBtn')?.addEventListener('click', function() {
             setTimeout(() => {
                 if (!document.hidden) {
                     showToast('⚠️ Если V2RayTUN не открылся — скопируйте подписку вручную');
                 }
             }, 2000);
+        });
+
+        // Подсказки для Happ и V2RayTUN (LTE)
+        document.getElementById('happLteBtn')?.addEventListener('click', function() {
+            setTimeout(() => {
+                if (!document.hidden) {
+                    showToast('⚠️ Если Happ не открылся — скопируйте подписку вручную');
+                }
+            }, 2000);
+        });
+
+        document.getElementById('v2rayLteBtn')?.addEventListener('click', function() {
+            setTimeout(() => {
+                if (!document.hidden) {
+                    showToast('⚠️ Если V2RayTUN не открылся — скопируйте подписку вручную');
+                }
+            }, 2000);
+        });
+
+        // Переключение между тарифами
+        const standardCard = document.getElementById('standardCard');
+        const lteCard = document.getElementById('lteCard');
+        const tabs = document.querySelectorAll('.tab');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabName = tab.getAttribute('data-tab');
+                
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                if (tabName === 'standard') {
+                    standardCard.style.display = 'block';
+                    lteCard.style.display = 'none';
+                    currentTab = 'standard';
+                } else {
+                    standardCard.style.display = 'none';
+                    lteCard.style.display = 'block';
+                    currentTab = 'lte';
+                }
+            });
         });
     </script>
 </body>

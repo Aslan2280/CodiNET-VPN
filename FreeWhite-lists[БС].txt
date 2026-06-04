@@ -1,3 +1,10 @@
+#subscription-userinfo: upload=0; download=0; total=9999999999999999; expire=1798761600
+#announce: 🚀 Бесплатная подписка от @CodiNetVPN
+#profile-title: 🌟 CodiNET | Обход БС
+#profile-update-interval: 12
+#profile-web-page-url: https://t.me/CodiNetVPN
+#support-url: https://t.me/CodiNetVPNbot
+
 vless://23568871-e1d0-4967-b777-a93579bed111@158.160.109.80:443?encryption=none&type=grpc&security=reality&mode=gun&fp=chrome&sni=ads.x5.ru&pbk=AvSwsAIp3t2sTvNDZwTPkbcanvu9wtvLyZ6FCzIM-Rk&sid=7ada97abaa&spx=/#⚡ Авто
 vless://23568871-e1d0-4967-b777-a93579bed111@84.201.159.233:443?encryption=none&type=grpc&security=reality&mode=gun&fp=chrome&sni=ads.x5.ru&pbk=DpJfEeCD3JpT18qNZQbNzi-tye_6ibubpKNIf6lonB8&sid=bd3cda1117aa&spx=/#🇷🇺 Россия [БС] #3
 vless://23568871-e1d0-4967-b777-a93579bed111@5.178.85.225:443?encryption=none&type=grpc&security=reality&mode=gun&fp=chrome&sni=ads.x5.ru&pbk=ObBnqYiOaiWqvELvFMZRiWrHYZ5wsyq0WWSwhBteYQw&sid=7a1197aa&spx=/#🇷🇺 Россия [БС] #5

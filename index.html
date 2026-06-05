@@ -2,8 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodiNET VPN — Тарифы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>CodiNET VPN — Все тарифы</title>
     <style>
         * {
             margin: 0;
@@ -24,8 +24,8 @@
         /* Шапка */
         .header {
             background: white;
-            border-radius: 16px;
-            padding: 20px 24px;
+            border-radius: 24px;
+            padding: 24px;
             max-width: 500px;
             width: 100%;
             margin-bottom: 20px;
@@ -101,18 +101,18 @@
         /* Основная карточка */
         .card {
             background: white;
-            border-radius: 16px;
+            border-radius: 24px;
             padding: 32px 24px;
             max-width: 500px;
             width: 100%;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             border: 1px solid #e0e0e0;
             margin-bottom: 20px;
         }
 
         h1 {
-            font-size: 26px;
-            font-weight: 600;
+            font-size: 28px;
+            font-weight: 700;
             margin-bottom: 8px;
             color: #1a1a1a;
         }
@@ -120,8 +120,8 @@
         .badge {
             background: #e8f5e9;
             color: #2e7d32;
-            font-size: 13px;
-            font-weight: 500;
+            font-size: 12px;
+            font-weight: 600;
             padding: 4px 10px;
             border-radius: 20px;
             display: inline-block;
@@ -215,7 +215,7 @@
         /* Блок с Telegram */
         .telegram-section {
             background: white;
-            border-radius: 16px;
+            border-radius: 20px;
             padding: 24px;
             max-width: 500px;
             width: 100%;
@@ -256,7 +256,6 @@
             background: #d4e4fc;
         }
 
-        /* Футер */
         .footer {
             max-width: 500px;
             width: 100%;
@@ -267,7 +266,6 @@
             padding: 16px;
         }
 
-        /* Уведомление (toast) */
         .toast {
             position: fixed;
             bottom: 30px;
@@ -306,12 +304,10 @@
                 text-align: center;
                 max-width: 80%;
             }
-            
             .telegram-links {
                 flex-direction: column;
                 align-items: center;
             }
-            
             .telegram-link {
                 width: 100%;
                 justify-content: center;
@@ -320,14 +316,13 @@
     </style>
 </head>
 <body>
-    <!-- Шапка -->
     <div class="header">
         <div class="logo">
             🔐
             <h2>CodiNET VPN</h2>
         </div>
         <div class="slogan">
-            Быстрый и безопасный доступ к интернету
+            Быстрый, безопасный и бесплатный доступ к открытому интернету.
         </div>
     </div>
 
@@ -335,100 +330,106 @@
     <div class="tabs">
         <div class="tab active" data-tab="standard">
             <div class="tab-title">🌟 Стандартный</div>
-            <div class="tab-price">Бесплатно / Все устройства</div>
+            <div class="tab-price">Надёжные серверы</div>
+        </div>
+        <div class="tab" data-tab="daily">
+            <div class="tab-title">📆 Daily</div>
+            <div class="tab-price">Ежедневное обновление</div>
         </div>
         <div class="tab" data-tab="lte">
-            <div class="tab-title">📡 LTE / Мобильный</div>
-            <div class="tab-price">Бесплатно / Обход</div>
+            <div class="tab-title">📡 Обход LTE</div>
+            <div class="tab-price">Для мобильных сетей</div>
         </div>
     </div>
 
-    <!-- Карточка Стандартного тарифа -->
+    <!-- КАРТОЧКА СТАНДАРТНОГО ТАРИФА -->
     <div class="card" id="standardCard">
-        <div class="badge">🔥 Популярно</div>
+        <div class="badge">⭐ Лучший тариф!</div>
         <h1>Стандартный</h1>
         <div class="price">0 ₽ <span>/ месяц</span></div>
         <div class="description">
-            Базовый тариф для обхода блокировок YouTube, TikTok, Instagram и других сервисов.
+            Основной тариф для стабильного обхода блокировок YouTube, Instagram и других сервисов. Надёжные, проверенные серверы.
         </div>
-
         <div class="features">
             <div class="feature">Безлимитный трафик</div>
             <div class="feature">До 50 Мбит/с</div>
-            <div class="feature">9+ серверов в США, Германии, Канаде, на Сейшелах</div>
+            <div class="feature">9+ серверов в США, Германии, Франции, Канаде и на Сейшелах</div>
             <div class="feature">Поддержка VLESS + WebSocket</div>
             <div class="feature">Действует до 31.12.2026</div>
         </div>
 
-        <button class="btn btn-copy" id="copyStandardBtn">
-            📋 Скопировать подписку
-        </button>
+        <button class="btn btn-copy" id="copyStandardBtn">📋 Скопировать подписку</button>
+        <a href="happ://subscribe?url=https://aslan2280.github.io/CodiNET-VPN/free-standart.txt" class="btn btn-happ" id="happStandardBtn">🚀 Открыть в Happ</a>
+        <a href="v2raytun://subscribe?url=https://aslan2280.github.io/CodiNET-VPN/free-standart.txt" class="btn btn-v2ray" id="v2rayStandardBtn">🔌 Открыть в V2RayTUN</a>
 
-        <a href="happ://subscribe?url=https://aslan2280.github.io/CodiNET-VPN/free-standart.txt" class="btn btn-happ" id="happStandardBtn">
-            🚀 Открыть Happ
-        </a>
-
-        <a href="v2raytun://subscribe?url=https://aslan2280.github.io/CodiNET-VPN/free-standart.txt" class="btn btn-v2ray" id="v2rayStandardBtn">
-            🔌 Открыть V2RayTUN
-        </a>
-
-        <div class="manual-link" style="background: #f9f9f9; padding: 12px; border-radius: 8px; margin-top: 20px; font-size: 12px; text-align: center; word-break: break-all;">
+        <div class="manual-link" style="background: #f9f9f9; padding: 12px; border-radius: 12px; margin-top: 20px; font-size: 12px; text-align: center; word-break: break-all;">
             📌 <strong>Подписка:</strong><br>
             <span>https://aslan2280.github.io/CodiNET-VPN/free-standart.txt</span>
         </div>
-
         <div class="info" style="font-size: 12px; color: #888; text-align: center; margin-top: 20px;">
-            🔹 <strong>Инструкция:</strong><br>
-            1. Нажмите «Скопировать подписку»<br>
-            2. Откройте Happ или V2RayTUN → «+» → «Импорт по ссылке»<br>
-            3. Вставьте подписку и нажмите «Добавить»
+            🔹 <strong>Инструкция:</strong> Нажмите «Скопировать» → Откройте Happ/V2RayTUN → «+» → «Импорт по ссылке» → Вставьте.
         </div>
     </div>
 
-    <!-- Карточка LTE тарифа -->
+    <!-- КАРТОЧКА DAILY ТАРИФА -->
+    <div class="card" id="dailyCard" style="display: none;">
+        <div class="badge">🔄 Обновляется каждый день</div>
+        <h1>📆 Daily</h1>
+        <div class="price">0 ₽ <span>/ день</span></div>
+        <div class="description">
+            Экспериментальный тариф со «свежими» ключами. Подписка автоматически обновляется, когда вы находите и публикуете новые ключи.
+        </div>
+        <div class="features">
+            <div class="feature">Ежедневные свежие ключи</div>
+            <div class="feature">Актуальные серверы</div>
+            <div class="feature">Разные страны и протоколы</div>
+            <div class="feature">Автообновление в клиенте</div>
+        </div>
+
+        <button class="btn btn-copy" id="copyDailyBtn">📋 Скопировать подписку</button>
+        <a href="happ://subscribe?url=https://aslan2280.github.io/CodiNET-VPN/free-daily.txt" class="btn btn-happ" id="happDailyBtn">🚀 Открыть в Happ</a>
+        <a href="v2raytun://subscribe?url=https://aslan2280.github.io/CodiNET-VPN/free-daily.txt" class="btn btn-v2ray" id="v2rayDailyBtn">🔌 Открыть в V2RayTUN</a>
+
+        <div class="manual-link" style="background: #f9f9f9; padding: 12px; border-radius: 12px; margin-top: 20px; font-size: 12px; text-align: center; word-break: break-all;">
+            📌 <strong>Подписка:</strong><br>
+            <span>https://aslan2280.github.io/CodiNET-VPN/free-daily.txt</span>
+        </div>
+        <div class="info" style="font-size: 12px; color: #888; text-align: center; margin-top: 20px;">
+            🔹 <strong>Инструкция:</strong> Нажмите «Скопировать» → Откройте Happ/V2RayTUN → «+» → «Импорт по ссылке» → Вставьте. Подписка будет обновляться сама.
+        </div>
+    </div>
+
+    <!-- КАРТОЧКА LTE ТАРИФА -->
     <div class="card" id="lteCard" style="display: none;">
         <div class="badge">📡 Нет LTE!</div>
-        <h1>LTE / Мобильный</h1>
+        <h1>📡 Обход LTE</h1>
         <div class="price">0 ₽ <span>/ месяц</span></div>
         <div class="description">
-            Специальный тариф для обхода блокировок в мобильных сетях (LTE, 4G, 5G).
+            Специальный тариф для обхода блокировок в мобильных сетях (LTE, 4G, 5G). Работает там, где обычные VPN бессильны.
         </div>
-
         <div class="features">
-            <div class="feature">Безлимитный трафик</div>
+            <div class="feature">Реальные IP-адреса (не Cloudflare)</div>
             <div class="feature">15+ серверов в Европе</div>
-            <div class="feature">Поддержка VLESS + gRPC / Reality</div>
-            <div class="feature">Действует до 31.12.2026</div>
+            <div class="feature">Безлимитный трафик</div>
+            <div class="feature">Протоколы: VLESS + gRPC / Reality</div>
         </div>
 
-        <button class="btn btn-copy" id="copyLteBtn">
-            📋 Скопировать подписку
-        </button>
+        <button class="btn btn-copy" id="copyLteBtn">📋 Скопировать подписку</button>
+        <a href="happ://subscribe?url=https://aslan2280.github.io/CodiNET-VPN/FreeWhite-lists.txt" class="btn btn-happ" id="happLteBtn">🚀 Открыть в Happ</a>
+        <a href="v2raytun://subscribe?url=https://aslan2280.github.io/CodiNET-VPN/FreeWhite-lists.txt" class="btn btn-v2ray" id="v2rayLteBtn">🔌 Открыть в V2RayTUN</a>
 
-        <a href="happ://subscribe?url=https://aslan2280.github.io/CodiNET-VPN/FreeWhite-lists.txt" class="btn btn-happ" id="happLteBtn">
-            🚀 Открыть Happ
-        </a>
-
-        <a href="v2raytun://subscribe?url=https://aslan2280.github.io/CodiNET-VPN/FreeWhite-lists.txt" class="btn btn-v2ray" id="v2rayLteBtn">
-            🔌 Открыть V2RayTUN
-        </a>
-
-        <div class="manual-link" style="background: #f9f9f9; padding: 12px; border-radius: 8px; margin-top: 20px; font-size: 12px; text-align: center; word-break: break-all;">
+        <div class="manual-link" style="background: #f9f9f9; padding: 12px; border-radius: 12px; margin-top: 20px; font-size: 12px; text-align: center; word-break: break-all;">
             📌 <strong>Подписка:</strong><br>
             <span>https://aslan2280.github.io/CodiNET-VPN/FreeWhite-lists.txt</span>
         </div>
-
         <div class="info" style="font-size: 12px; color: #888; text-align: center; margin-top: 20px;">
-            🔹 <strong>Инструкция:</strong><br>
-            1. Нажмите «Скопировать подписку»<br>
-            2. Откройте Happ или V2RayTUN → «+» → «Импорт по ссылке»<br>
-            3. Вставьте подписку и нажмите «Добавить»
+            🔹 <strong>Инструкция:</strong> Нажмите «Скопировать» → Откройте Happ/V2RayTUN → «+» → «Импорт по ссылке» → Вставьте.
         </div>
     </div>
 
     <!-- Блок с Telegram -->
     <div class="telegram-section">
-        <div class="telegram-title">📢 Следите за новостями</div>
+        <div class="telegram-title">📢 Следите за новостями и обновлениями</div>
         <div class="telegram-links">
             <a href="https://t.me/CodiNetVPN" class="telegram-link" target="_blank">
                 📰 Telegram канал
@@ -439,15 +440,15 @@
         </div>
         <hr>
         <div style="font-size: 12px; color: #888;">
-            В канале — анонсы новых серверов и акции.<br>
-            В боте — автоматическая выдача подписки 24/7.
+            В канале — анонсы новых серверов, тарифов и акции.<br>
+            В боте — автоматическая выдача подписок 24/7.
         </div>
     </div>
 
     <!-- Футер -->
     <div class="footer">
-        © 2026 CodiNET VPN<br>
-        Бесплатный доступ к открытому интернету
+        © 2025 CodiNET VPN<br>
+        Бесплатный и открытый доступ к интернету для всех.
     </div>
 
     <!-- Уведомление -->
@@ -455,11 +456,17 @@
 
     <script>
         // URL подписок
-        const standardUrl = "https://aslan2280.github.io/CodiNET-VPN/free-standart.txt";
-        const lteUrl = "https://aslan2280.github.io/CodiNET-VPN/FreeWhite-lists.txt";
+        const urls = {
+            standard: "https://aslan2280.github.io/CodiNET-VPN/free-standart.txt",
+            daily: "https://aslan2280.github.io/CodiNET-VPN/free-daily.txt",
+            lte: "https://aslan2280.github.io/CodiNET-VPN/FreeWhite-lists.txt"
+        };
         
-        let currentTab = 'standard';
-        
+        // Элементы карточек
+        const standardCard = document.getElementById('standardCard');
+        const dailyCard = document.getElementById('dailyCard');
+        const lteCard = document.getElementById('lteCard');
+        const tabs = document.querySelectorAll('.tab');
         const toast = document.getElementById('toast');
 
         function showToast(message) {
@@ -470,95 +477,59 @@
             }, 2500);
         }
 
-        // Копирование подписки (Стандартная)
-        document.getElementById('copyStandardBtn')?.addEventListener('click', async () => {
+        async function copyToClipboard(text, planName) {
             try {
-                await navigator.clipboard.writeText(standardUrl);
-                showToast('✅ Подписка скопирована!');
+                await navigator.clipboard.writeText(text);
+                showToast(`✅ Подписка ${planName} скопирована!`);
             } catch (err) {
                 const textarea = document.createElement('textarea');
-                textarea.value = standardUrl;
+                textarea.value = text;
                 document.body.appendChild(textarea);
                 textarea.select();
                 document.execCommand('copy');
                 document.body.removeChild(textarea);
-                showToast('✅ Подписка скопирована!');
+                showToast(`✅ Подписка ${planName} скопирована!`);
             }
-        });
-
-        // Копирование подписки (LTE)
-        document.getElementById('copyLteBtn')?.addEventListener('click', async () => {
-            try {
-                await navigator.clipboard.writeText(lteUrl);
-                showToast('✅ Подписка скопирована!');
-            } catch (err) {
-                const textarea = document.createElement('textarea');
-                textarea.value = lteUrl;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textarea);
-                showToast('✅ Подписка скопирована!');
-            }
-        });
-
-        // Подсказки для Happ и V2RayTUN (Стандарт)
-        document.getElementById('happStandardBtn')?.addEventListener('click', function() {
-            setTimeout(() => {
-                if (!document.hidden) {
-                    showToast('⚠️ Если Happ не открылся — скопируйте подписку вручную');
-                }
-            }, 2000);
-        });
-
-        document.getElementById('v2rayStandardBtn')?.addEventListener('click', function() {
-            setTimeout(() => {
-                if (!document.hidden) {
-                    showToast('⚠️ Если V2RayTUN не открылся — скопируйте подписку вручную');
-                }
-            }, 2000);
-        });
-
-        // Подсказки для Happ и V2RayTUN (LTE)
-        document.getElementById('happLteBtn')?.addEventListener('click', function() {
-            setTimeout(() => {
-                if (!document.hidden) {
-                    showToast('⚠️ Если Happ не открылся — скопируйте подписку вручную');
-                }
-            }, 2000);
-        });
-
-        document.getElementById('v2rayLteBtn')?.addEventListener('click', function() {
-            setTimeout(() => {
-                if (!document.hidden) {
-                    showToast('⚠️ Если V2RayTUN не открылся — скопируйте подписку вручную');
-                }
-            }, 2000);
-        });
+        }
 
         // Переключение между тарифами
-        const standardCard = document.getElementById('standardCard');
-        const lteCard = document.getElementById('lteCard');
-        const tabs = document.querySelectorAll('.tab');
-
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
                 const tabName = tab.getAttribute('data-tab');
                 
+                // Обновить активный таб
                 tabs.forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
                 
+                // Показать нужную карточку
+                standardCard.style.display = 'none';
+                dailyCard.style.display = 'none';
+                lteCard.style.display = 'none';
+                
                 if (tabName === 'standard') {
                     standardCard.style.display = 'block';
-                    lteCard.style.display = 'none';
-                    currentTab = 'standard';
-                } else {
-                    standardCard.style.display = 'none';
+                } else if (tabName === 'daily') {
+                    dailyCard.style.display = 'block';
+                } else if (tabName === 'lte') {
                     lteCard.style.display = 'block';
-                    currentTab = 'lte';
                 }
             });
         });
+
+        // --- Standard Plan Buttons ---
+        document.getElementById('copyStandardBtn').addEventListener('click', () => copyToClipboard(urls.standard, '«Стандартный»'));
+        document.getElementById('happStandardBtn')?.addEventListener('click', () => setTimeout(() => showToast('🚀 Открываем Happ...'), 500));
+        document.getElementById('v2rayStandardBtn')?.addEventListener('click', () => setTimeout(() => showToast('🔌 Открываем V2RayTUN...'), 500));
+
+        // --- Daily Plan Buttons ---
+        document.getElementById('copyDailyBtn').addEventListener('click', () => copyToClipboard(urls.daily, '«Daily»'));
+        document.getElementById('happDailyBtn')?.addEventListener('click', () => setTimeout(() => showToast('🚀 Открываем Happ...'), 500));
+        document.getElementById('v2rayDailyBtn')?.addEventListener('click', () => setTimeout(() => showToast('🔌 Открываем V2RayTUN...'), 500));
+
+        // --- LTE Plan Buttons ---
+        document.getElementById('copyLteBtn').addEventListener('click', () => copyToClipboard(urls.lte, '«Обход LTE»'));
+        document.getElementById('happLteBtn')?.addEventListener('click', () => setTimeout(() => showToast('🚀 Открываем Happ...'), 500));
+        document.getElementById('v2rayLteBtn')?.addEventListener('click', () => setTimeout(() => showToast('🔌 Открываем V2RayTUN...'), 500));
     </script>
 </body>
 </html>
